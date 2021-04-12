@@ -45,9 +45,10 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $products = new Product;
+        $products->prod_id = $request->input('prod_id');
         $products->price = $request->input('price');
         $products->name = $request->input('name');
-        $products->art_id = $request->input('art_id');
+        $products->contain_article = $request->input('contain_article');
         $products->save();
         return new ProductResource($products);
     }
@@ -73,9 +74,11 @@ class ProductController extends Controller
     public function update(Request $request, $product)
     {
         $products =Product::find($product);
+        $products->prod_id = $request->input('prod_id');
         $products->price = $request->input('price');
         $products->name = $request->input('name');
-        $products->art_id = $request->input('art_id');
+        $products->contain_article = $request->input('contain_article');
+        
         $products->save();
         return new ProductResource($products);
     }
