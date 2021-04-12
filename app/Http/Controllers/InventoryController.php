@@ -81,39 +81,3 @@ class InventoryController extends Controller
         $inventorys->delete();
     }
 }
-
-
-
-
-
-
-
-    // public function show(Inventory $inventory)
-    // {
-
-    //     return $inventory;
-    // }
-
-    // public function store(Request $request)
-    // {
-
-    //     $inventory = Inventory::create($request->all());
-
-    //     return response()->json($inventory, 201);
-    // }
-
-    // public function update(Request $request, Inventory $inventory)
-    // {
-
-    //     $inventory->update($request->all());
-
-    //     return response()->json($inventory, 200);
-    // }
-
-    // public function destroy(Inventory $inventory)
-    // {
-    //     $inventory->delete();
-
-    //     return response()->json(null, 204);
-    //}
-

@@ -18,12 +18,6 @@ class ProductController extends Controller
     {
          $products = Product::all();
          return ProductResource::collection($products);
-
-     //dd($products);
-        // dd($drivers);
-        // return view('index');
-
-     //return view('index')->with(compact(ProductResource::collection($products)));
     }
 
     /**
@@ -78,7 +72,6 @@ class ProductController extends Controller
         $products->price = $request->input('price');
         $products->name = $request->input('name');
         $products->contain_article = $request->input('contain_article');
-        
         $products->save();
         return new ProductResource($products);
     }
