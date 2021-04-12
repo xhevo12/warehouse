@@ -14,8 +14,6 @@ use App\Http\Controllers\InventoryController;
 |
 */
 
-// Route::get('/products [ProductController::class, 'getJSON');
-
 //product
 Route::get('product', [ProductController::class,'index']);
 Route::get('product/{product}', [ProductController::class,'show']);
