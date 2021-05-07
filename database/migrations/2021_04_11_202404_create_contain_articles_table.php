@@ -15,7 +15,6 @@ class CreateContainArticlesTable extends Migration
     {
         Schema::create('contain_articles', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('prod_id');
             $table->unsignedBigInteger('art_id');
             $table->integer('amount_of');
             $table->timestamps();

@@ -17,34 +17,16 @@ class ProductSeed extends Seeder
     {
         $product = [
             [
-                'contain_article' => 1,
-                'name' => 'leg',
-                'prod_id'=>'1',
+                'name' => 'Dining Chair',               
                 'price' => 12,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-            [
-                'contain_article' => 2,
-                'name' => 'screw',
-                'prod_id'=>'2',
-                'price' => 17,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-            [
-                'contain_article' => 3,
-                'name' => 'seat',
-                'prod_id'=>'3',
-                'price' => 2,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-            [
                 'contain_article' => 1,
-                'name' => 'table top',
-                'prod_id'=>'4',
-                'price' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Dinning Table',
+                'price' => 17,
+                'contain_article' => 2,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],

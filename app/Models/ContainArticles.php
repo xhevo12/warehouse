@@ -10,7 +10,7 @@ class ContainArticles extends Model
     use HasFactory;
 
     protected $fillable = [
-        'prod_id',
+      
         'art_id',
         'amount_of', 
         

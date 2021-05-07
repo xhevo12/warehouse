@@ -14,10 +14,12 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
          $products = Product::all();
          return ProductResource::collection($products);
+      
     }
 
     /**
@@ -39,7 +41,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $products = new Product;
-        $products->prod_id = $request->input('prod_id');
+
         $products->price = $request->input('price');
         $products->name = $request->input('name');
         $products->contain_article = $request->input('contain_article');
@@ -68,7 +70,7 @@ class ProductController extends Controller
     public function update(Request $request, $product)
     {
         $products =Product::find($product);
-        $products->prod_id = $request->input('prod_id');
+
         $products->price = $request->input('price');
         $products->name = $request->input('name');
         $products->contain_article = $request->input('contain_article');
@@ -86,5 +88,6 @@ class ProductController extends Controller
     {
         $products = Product::findOrfail($product);
         $products->delete();
+      
     }
 }
